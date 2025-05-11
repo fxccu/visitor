@@ -43,7 +43,10 @@
 #### 界面预览
 
 ##### 登记首页
-![登记首页](images/登记首页_zh.png)
+中文版本 | English Version
+:-------------------------:|:-------------------------:
+<img src="images/登记首页_zh.png" width="500"> | <img src="images/登记首页_en.png" width="500">
+
 
 ##### 访客须知
 中文版本 | English Version
