@@ -82,11 +82,33 @@ visitor/
 │   │   └── App.jsx     # 主应用组件
 │   └── package.json
 │
-└── backend/           # Node.js 后端项目
-    ├── config.js     # 配置文件
-    ├── index.js      # 服务器入口
-    └── package.json
+├── backend/           # Node.js 后端项目
+│   ├── config.js     # 配置文件
+│   ├── index.js      # 服务器入口
+│   └── package.json
+│
+├── workers/           # Cloudflare Worker 无服务器后端
+│   ├── index.js      # Worker 入口
+│   └── wrangler.toml # Worker 配置
+│
+├── images/            # 项目截图与文档图片
+│   ├── 登记首页_zh.png
+│   ├── 访客须知_zh_zh.png
+│   ├── 访客须知_en.png
+│   ├── 登记成功.png
+│   ├── 登记成功_en.png
+│   ├── 飞书多维数据集字段.png
+│   └── 飞书多维数据集示例.png
+└── README.md
 ```
+
+## 飞书多维表格示例
+
+下图为飞书多维表格字段设置与数据示例：
+
+| 字段设置 | 数据示例 |
+|:---:|:---:|
+| ![飞书多维数据集字段](images/飞书多维数据集字段.png) | ![飞书多维数据集示例](images/飞书多维数据集示例.png) |
 
 ## 部署说明
 
