@@ -18,7 +18,7 @@ export default function UserNoticeModal({ onClose }) {
   useEffect(() => {
     const loadMarkdownContent = async () => {
       try {
-        const response = await fetch(`/src/assets/agreeTerms.${i18n.language}.md`);
+        const response = await fetch(`/assets/agreeTerms.${i18n.language}.md`);
         const content = await response.text();
         setMarkdownContent(content);
         

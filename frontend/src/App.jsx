@@ -32,7 +32,6 @@ const formatDate = (date, language) => {
 const initialForm = {
   visitorName: '',
   phone: '',
-  visitDate: '',
   visitPurpose: '',
   hostName: '',
   hostPhone: '',
@@ -43,7 +42,6 @@ const initialForm = {
 const REQUIRED_FIELDS = [
   'visitorName',
   'phone',
-  'visitDate',
   'visitPurpose',
   'hostName',
   'hostPhone'
@@ -151,7 +149,6 @@ export default function App() {
         <div style={{ background: 'rgba(255,255,255,0.3)', borderRadius: '10px' }} className="p-6">
           <Input label={t('visitorName')} name="visitorName" value={form.visitorName} onChange={handleChange} error={errors.visitorName} required dark placeholderSize="text-sm" />
           <Input label={t('phone')} name="phone" value={form.phone} onChange={handleChange} error={errors.phone} required dark placeholderSize="text-sm" />
-          <Input label={t('visitDate')} name="visitDate" value={form.visitDate} onChange={handleChange} error={errors.visitDate} type="date" required dark placeholderSize="text-sm" />
           <Input label={t('visitPurpose')} name="visitPurpose" value={form.visitPurpose} onChange={handleChange} error={errors.visitPurpose} required dark placeholderSize="text-sm" />
           <Input label={t('hostName')} name="hostName" value={form.hostName} onChange={handleChange} error={errors.hostName} required dark placeholderSize="text-sm" />
           <Input label={t('hostPhone')} name="hostPhone" value={form.hostPhone} onChange={handleChange} error={errors.hostPhone} required dark placeholderSize="text-sm" />

@@ -13,7 +13,7 @@ app.post('/api/visitor', async (req, res) => {
   const feishuData = {
     VisitorName: req.body.visitorName,
     Phone: req.body.phone,
-    VisitDate: req.body.visitDate,
+    VisitTime: new Date().toISOString().slice(0, 10),
     VisitPurpose: req.body.visitPurpose,
     HostName: req.body.hostName,
     HostPhone: req.body.hostPhone,

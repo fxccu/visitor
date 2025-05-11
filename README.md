@@ -121,6 +121,42 @@ npm install
 npm start
 ```
 
+### 3.1 Cloudflare Worker 部署
+
+本项目支持通过 Cloudflare Worker 方式无服务器部署后端接口，适合高可用和全球加速场景。
+
+#### 步骤
+1. 进入 `workers` 目录：
+   ```bash
+   cd workers
+   ```
+2. 配置环境变量，在 `wrangler.toml` 文件中填写你的飞书相关参数：
+   ```toml
+   [vars]
+   FEISHU_APP_ID = "你的飞书AppID"
+   FEISHU_APP_SECRET = "你的飞书AppSecret"
+   FEISHU_TABLE_TOKEN = "你的多维表格Token"
+   FEISHU_APP_TOKEN = "你的飞书AppToken"
+   ```
+3. 安装 wrangler（如未安装）：
+   ```bash
+   npm install -g wrangler
+   ```
+4. 本地开发调试：
+   ```bash
+   wrangler dev
+   ```
+5. 部署到 Cloudflare：
+   ```bash
+   wrangler publish
+   ```
+
+#### 说明
+- Worker 入口为 `workers/index.js`，配置文件为 `workers/wrangler.toml`
+- 所有环境变量通过 `env` 传递，无需在代码中硬编码
+- 默认监听 POST 请求，接口路径为 Worker 绑定的域名
+- 时间字段 `VisitTime` 自动按北京时间（东八区）生成
+
 ### 4. 环境变量配置
 
 #### 前端环境变量 (.env)
